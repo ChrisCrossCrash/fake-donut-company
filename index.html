@@ -4,11 +4,61 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Donut Time!</title>
   </head>
   <body>
-    <h1>Hello</h1>
-    <button class="btn btn-primary">Click Here</button>
+    <!-- FIXME: The navbar text colors are all still black, instead of the custom "dark" theme color. -->
+    <nav class="navbar navbar-expand-md navbar-light bg-primary">
+      <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand" href="#">Donut Time!</a>
+        <button
+          class="navbar-toggler align-self-center"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse flex-grow-0"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-lg-0">
+            <li class="nav-item">
+              <!-- TODO: Make the active class change -->
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#varieties">Varieties</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mission">Mission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="hero__background"></div>
+      <div class="container">
+        <div class="row-12 row-md-6 hero__text-content">
+          <h1>Hi Hungry! I'm Donut!</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+            facere minima hic ut, fugit ea.
+          </p>
+          <button class="btn btn-secondary btn-lg">Our Products</button>
+        </div>
+      </div>
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

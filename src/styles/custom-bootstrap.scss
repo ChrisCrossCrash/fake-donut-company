@@ -1,6 +1,15 @@
 // Customizing Bootstrap docs
 //  https://getbootstrap.com/docs/5.1/customize/sass/
 
+$primary: #eea0ff;
+$secondary: #a8ece7;
+$dark: #422648;
+
+$font-family-base: 'Noto Sans', Arial, Helvetica, sans-serif;
+
+$body-color: $dark;
+
 // TODO: Only import the parts of Bootstrap that are needed
 //  https://getbootstrap.com/docs/5.1/customize/sass/#importing
+
 @import '../../node_modules/bootstrap/scss/bootstrap';
