@@ -12,10 +12,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import donutGlb from '/src/donut.glb'
 
-const container = document.querySelector<HTMLDivElement>('.three-container')
-if (!container) {
-  throw new Error('Three JS container not found')
-}
+const container = document.querySelector<HTMLDivElement>('.three-container')!
+
+const loadingSpinner =
+  document.querySelector<HTMLDivElement>('.loading-spinner')!
 
 const scene = new Scene()
 
@@ -65,7 +65,10 @@ const loader = new GLTFLoader()
 loader.load(
   donutGlb,
   // This gets called after the model is loaded
-  (gltf) => scene.add(gltf.scene),
+  (gltf) => {
+    loadingSpinner.classList.add('hidden')
+    scene.add(gltf.scene)
+  },
   // Optional onProgress callback
   undefined,
   // Optional onError callback
