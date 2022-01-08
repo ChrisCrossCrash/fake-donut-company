@@ -10,6 +10,10 @@ import {
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
+// TODO: Configure TypeScript so that this doesn't need to be ignored.
+// @ts-ignore
+import donutGlb from '/src/donut.glb'
+
 const container = document.querySelector<HTMLDivElement>('.three-container')
 if (!container) {
   throw new Error('Three JS container not found')
@@ -61,7 +65,7 @@ animate()
 
 const loader = new GLTFLoader()
 loader.load(
-  '/src/donut.glb',
+  donutGlb,
   // This gets called after the model is loaded
   (gltf) => scene.add(gltf.scene),
   // Optional onProgress callback
